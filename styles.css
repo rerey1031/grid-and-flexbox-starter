@@ -281,7 +281,7 @@ p{
 }
 
 #plants section{
-    /* TO DO: Make these flex containers that flow in the column direction, do not allow wrapping, and justify the content with space between the elements */
+    /* ⭐⭐⭐ Make these flex containers that flow in the column direction, do not allow wrapping, and justify the content with space between the elements */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -290,8 +290,8 @@ p{
 }
 
 #plants img{
-    /* TO DO: Use flexbox here to make the images in these sections appear before the headings */
-    
+    /* ⭐⭐⭐ Use flexbox here to make the images in these sections appear before the headings */
+    order: -1;
     width: 100%;
     max-width: 400px;
     height: auto;
@@ -392,8 +392,10 @@ th:nth-of-type(even), td:nth-of-type(even){
 
 /* Social Media List */
 #social ul{
-    /* TO DO: Make this a grid container with three equal columns and a 16 pixel gap */
-    
+    /* ⭐⭐⭐ Make this a grid container with three equal columns and a 16 pixel gap */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
     width: fit-content;
     margin: 16px auto 32px;
 }
@@ -401,7 +403,7 @@ th:nth-of-type(even), td:nth-of-type(even){
 /* Heading for Social Media Section */
 #social h4{
     /* TO DO: Make this heading span all of the columns in its grid container */
-    
+    grid-column: 1 / -1;
 }
 
 #social a{
